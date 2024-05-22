@@ -274,6 +274,23 @@
                     "hidden": true
                 }
             }
+        },
+        "fastp_options": {
+            "title": "FASTP options",
+            "type": "object",
+            "description": "",
+            "default": "",
+            "properties": {
+                "adapters": {
+                    "type": "string"
+                },
+                "save_merged": {
+                    "type": "boolean"
+                },
+                "save_trimmed_fail": {
+                    "type": "boolean"
+                }
+            }
         }
     },
     "allOf": [
@@ -291,6 +308,9 @@
         },
         {
             "$ref": "#/definitions/generic_options"
+        },
+        {
+            "$ref": "#/definitions/fastp_options"
         }
     ]
 }
